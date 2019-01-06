@@ -10,7 +10,7 @@ class App extends Component {
         this.state= {
             tasks: [
             ],
-            taskType: 'all'
+            taskType: false
         }
         this.alltask = this.alltask.bind(this);
         this.completedtask = this.completedtask.bind(this);
