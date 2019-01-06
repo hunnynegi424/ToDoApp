@@ -7,15 +7,20 @@ class Tasks extends Component {
       }
 
       updateStatus(checkBoxStatus) {
-          this.setState({isChecked: checkBoxStatus})
+          if(this.state.isChecked == false){
+          this.setState({isChecked: true})
+          }
+          else{
+            this.setState({isChecked: false})
+          }
       }
   render() {
     return (
       <div>
       <input type="checkbox" 
                 className="chk-box" 
-                //checked={this.state.isChecked}
-                //onChange={checkBoxStatus => this.updateStatus(checkBoxStatus)}
+                checked={this.state.isChecked}
+                onChange={checkBoxStatus => this.updateStatus(checkBoxStatus)}
                 />
       </div>
     );
